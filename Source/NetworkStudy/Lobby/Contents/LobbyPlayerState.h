@@ -18,6 +18,11 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 	bool bIsReady;
 
-	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, ReplicatedUsing = OnRep_Nickname)
 	FText NickName;
+	
+	UFUNCTION()
+	void OnRep_Nickname();
+
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 };

@@ -33,6 +33,10 @@
 		{
 			"Name": "TestP",
 			"Enabled": false
+		},
+		{
+			"Name": "OnlineSubsystemSteam",
+			"Enabled": true
 		}
 	]
 }
