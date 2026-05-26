@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "FindSessionsCallbackProxy.h"
 #include "Blueprint/UserWidget.h"
 #include "SessionListWidget.generated.h"
 
@@ -36,4 +37,14 @@ protected:
 
 	UPROPERTY(meta = (BindWidget))
 	TObjectPtr<UButton> Btn_Close;
+
+protected:
+	UPROPERTY(BlueprintReadWrite, EditAnywhere)
+	TSubclassOf<USessionItemWidget> SessionItemWidgetClass;
+
+	UPROPERTY(BlueprintReadWrite)
+	TArray<TObjectPtr<USessionItemWidget>> SessionItemWidgets;
+
+	UPROPERTY(BlueprintReadWrite)
+	TArray<FBlueprintSessionResult> SessionResults;
 };

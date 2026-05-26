@@ -5,6 +5,9 @@
 
 bool USessionListWidget::Initialize()
 {
+	Super::Initialize();
+
+	return true;
 }
 
 void USessionListWidget::SetInfo()
