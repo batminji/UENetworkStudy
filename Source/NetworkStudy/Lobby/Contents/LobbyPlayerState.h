@@ -14,4 +14,10 @@ class NETWORKSTUDY_API ALobbyPlayerState : public APlayerState
 {
 	GENERATED_BODY()
 	
+public:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	bool bIsReady;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+	FText NickName;
 };
