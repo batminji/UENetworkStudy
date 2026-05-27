@@ -44,7 +44,7 @@ void ULobbyUserWidget::RefreshUI()
 		Txt_Ready->SetVisibility(ESlateVisibility::Visible);
 	}
 
-	if (bIsLocalPlayer && bIsReady)
+	if (bIsLocalPlayer && !bIsReady)
 	{
 		Btn_Ready->SetVisibility(ESlateVisibility::Visible);
 	}
