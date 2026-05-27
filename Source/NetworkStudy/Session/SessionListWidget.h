@@ -25,17 +25,17 @@ public:
 	UFUNCTION(BlueprintCallable)
 	void RefreshUI();
 	
-protected:
+public:
 	UPROPERTY(meta = (BindWidget))
 	TObjectPtr<UWrapBox> SessionList;
 
-	UPROPERTY(meta = (BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 	TObjectPtr<UButton> Btn_Refresh;
 
-	UPROPERTY(meta = (BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 	TObjectPtr<UButton> Btn_CreateSession;
 
-	UPROPERTY(meta = (BindWidget))
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (BindWidget))
 	TObjectPtr<UButton> Btn_Close;
 
 protected:
